@@ -29,7 +29,7 @@ import { EmailActionSC } from "./email-action.styles"
 
 
 const PATTERN = /^[A-Za-z0-9#+._-]+@[A-Za-z0-9._-]+.+[A-Za-z0-9_-]+$/;
-const BE_INIT_MAIL_URL = '';
+const BE_INIT_MAIL_URL = 'WRITE_FUNCTION_URL';
 
 
 export const EmailAction = () => {
