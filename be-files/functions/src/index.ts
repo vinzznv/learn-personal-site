@@ -33,7 +33,7 @@ const FIRESTORE_ACCESS = FIREBASE_ADMIN.firestore();
 
 const EMAIL_TOPIC = 'email-service-send-email';
 const PATTERN = /^[A-Za-z0-9#+._-]+@[A-Za-z0-9._-]+.+[A-Za-z0-9_-]+$/;
-const MAIL_SERVER_KEY = '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';
+const MAIL_SERVER_KEY = 'YOUR_MAIL_SERVER_KEY';
 const MAIL_SERVER_URL = 'https://api.sendinblue.com/v3/smtp/email';
 
 
@@ -44,8 +44,8 @@ export const sendEmail = functions.region('asia-south1').pubsub.topic(EMAIL_TOPI
     try {
         const requestBody = {  
             "sender":{  
-               "name":"Vinayaka",
-               "email":"vinayaka@vinznv.com"
+               "name":"YOUR_NAME",
+               "email":"YOUR_EMAIL"
             },
             "to":[  
                {
@@ -77,7 +77,7 @@ export const sendEmail = functions.region('asia-south1').pubsub.topic(EMAIL_TOPI
     }
 });
 
-const corsHandler = cors({origin: 'https://vinznv.com'});
+const corsHandler = cors({origin: 'http://localhost:3000'});
 
 
 export const initEmail = functions.region('asia-south1').https.onRequest((request, response) => {
